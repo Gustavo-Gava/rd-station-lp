@@ -8,7 +8,7 @@ export const Footer = () => {
 			<S.ContentContainer>
 				<S.SocialContentWrapper>
 					<S.LogoContainer>
-						<Image src="/svg/logo-rd-station-default.svg" width={174} height={32} alt="Logo" />
+						<Image src="/svg/logo-rd-station-bw.svg" width={174} height={32} alt="Logo" />
 					</S.LogoContainer>
 
 					<S.LinksContainerDesktop>
