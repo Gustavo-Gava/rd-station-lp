@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+    font-family: "Nunito sans";
   }
 
   *,
@@ -10,6 +11,8 @@ export const GlobalStyle = createGlobalStyle`
   ::after {
     border-width: 0;
     border-style: solid;
+    margin: 0;
+    padding: 0;
   }
 
   html {
@@ -44,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   h6 {
     font-size: inherit;
     font-weight: inherit;
+    font-family: "Darker Grotesque", sans-serif;
   }
 
   ol,
