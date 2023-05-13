@@ -1,9 +1,9 @@
 import theme from '@/styles/theme/theme';
-import { applyContainerStyles, applyContentContainerStyles } from './../../styles/utils';
+import { applyContentContainerStyles, applyFullWidthContainerStyles } from './../../styles/utils';
 import styled from 'styled-components'
 
 export const Container = styled.footer`
-  ${applyContainerStyles()};
+  ${applyFullWidthContainerStyles()};
 
   display: flex;
   background-color: ${({ theme }) => theme.colors.primary.main};
