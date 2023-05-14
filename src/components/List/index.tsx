@@ -55,7 +55,7 @@ export const List = () => {
 
 				<S.ImageWrapper>
 					<S.HighlightedImage
-						src="/png/img-rdoer.png"
+						src="/images/img-results.jpg"
 						width={400}
 						height={325}
 						alt="Woman with pencil in hands"
