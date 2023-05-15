@@ -3,7 +3,7 @@ import * as S from "./styles";
 
 type Data = {
 	title: string;
-	content: Array<{
+	content?: Array<{
 		text: string;
 		link: string;
 	}>;
@@ -24,11 +24,13 @@ export const Dropdown = ({ data, closeDropdown }: DropdownProps) => {
 
 						<S.Line />
 
-						<S.ListWrapper>
-							{item.content.map((content) => (
-								<S.ListItem key={content.text}>{content.text}</S.ListItem>
-							))}
-						</S.ListWrapper>
+						{item.content && (
+							<S.ListWrapper>
+								{item.content.map((content) => (
+									<S.ListItem key={content.text}>{content.text}</S.ListItem>
+								))}
+							</S.ListWrapper>
+						)}
 					</S.ListContainer>
 				))}
 			</S.Content>

@@ -47,11 +47,15 @@ export const Container = styled.button<ContainerProps>`
 	position: relative;
 	width: 100%;
 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 6px 16px;
+
 	font-size: ${({ theme }) => theme.fonts.size.body.sm};
 	font-weight: ${({ theme }) => theme.fonts.weight.extrabold};
 	color: ${({ theme }) => theme.colors.gray[100]};
-
-	padding: 6px 16px;
 
 	transition: all 0.2s;
 

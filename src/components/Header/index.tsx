@@ -8,6 +8,31 @@ import { MenuDesktop } from "./MenuDesktop";
 
 type ButtonVariant = "primary" | "secondary" | "highlighted";
 
+export type MenuContent = {
+	title: string;
+	content?: Array<{
+		text: string;
+		link: string;
+	}>;
+};
+
+export type ListItem = {
+	title: string;
+	content?: Array<MenuContent>;
+};
+
+type Button = {
+	title: string;
+	isLink?: boolean;
+	href?: string;
+	variant?: "primary" | "secondary" | "highlighted";
+};
+
+export interface MenuDataProps {
+	listItems: Array<ListItem>;
+	buttons: Array<Button>;
+}
+
 const menuData = {
 	listItems: [
 		{ title: "Menu 1" },
@@ -15,7 +40,10 @@ const menuData = {
 			title: "Menu 2",
 			content: [
 				{ title: "METODOLOGIA", content: [{ text: "Tudo sobre Inbound Marketing", link: "/" }] },
-				{ title: "CURSOS", content: [{ text: "RD University", link: "/" }] },
+				{
+					title: "CURSOS",
+					content: [{ text: "RD University", link: "https://app.rdstation.com.br/signup/" }],
+				},
 			],
 		},
 		{ title: "Menu 3" },
@@ -23,7 +51,12 @@ const menuData = {
 	],
 	buttons: [
 		{ title: "Button", variant: "secondary" as ButtonVariant },
-		{ title: "Button", variant: "primary" as ButtonVariant, isLink: true, href: "/" },
+		{
+			title: "Button",
+			variant: "primary" as ButtonVariant,
+			isLink: true,
+			href: "https://app.rdstation.com.br/signup/",
+		},
 	],
 };
 
@@ -63,7 +96,7 @@ export const Header = () => {
 					overlay: { padding: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" },
 				}}
 			>
-				<Menu />
+				<Menu data={menuData} />
 			</ReactModal>
 		</S.Container>
 	);

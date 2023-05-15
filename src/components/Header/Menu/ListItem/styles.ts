@@ -30,6 +30,7 @@ export const Title = styled.span`
 export const Content = styled.div<ContentProps>`
 	display: flex;
 	flex-direction: column;
+	gap: 16px;
 	transition: all 0.3s;
 	overflow: hidden;
 
@@ -58,4 +59,31 @@ export const ChevronIcon = styled(Image)<ContentProps>`
 			: css`
 					transform: rotate(0deg);
 			  `}
+`;
+
+export const ContentItem = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 8px;
+`;
+
+export const ContentItemTitle = styled.div`
+	font-size: ${({ theme }) => theme.fonts.size.body.sm};
+	font-weight: ${({ theme }) => theme.fonts.weight.bold};
+	line-height: ${({ theme }) => theme.fonts.lineHeight.body.sm};
+	color: ${({ theme }) => theme.colors.primary.main};
+`;
+
+export const ContentItemDivider = styled.div`
+	width: 100%;
+	height: 1px;
+	background-color: ${({ theme }) => theme.colors.gray[30]};
+`;
+
+export const ContentItemLink = styled.div`
+	font-size: ${({ theme }) => theme.fonts.size.body.sm};
+	font-weight: ${({ theme }) => theme.fonts.weight.normal};
+	line-height: ${({ theme }) => theme.fonts.lineHeight.body.sm};
+	color: ${({ theme }) => theme.colors.gray[100]};
 `;

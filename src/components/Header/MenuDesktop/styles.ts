@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ListItemProps {
+	active?: boolean;
+}
+
 export const Container = styled.div`
 	display: flex;
 	align-items: center;
@@ -18,7 +22,26 @@ export const ListWrapper = styled.div`
 	font-weight: ${({ theme }) => theme.fonts.weight.bold};
 `;
 
-export const ListItem = styled.span``;
+export const ListItem = styled.div<ListItemProps>`
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: ${({ theme, active }) => (active ? theme.colors.primary.main : "inherit")};
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+
+		background-color: ${({ theme, active }) =>
+			active ? theme.colors.primary.main : "transparent"};
+	}
+`;
 
 export const ButtonsWrapper = styled.div`
 	display: flex;

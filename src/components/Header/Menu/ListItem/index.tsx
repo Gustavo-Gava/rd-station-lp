@@ -1,9 +1,10 @@
 import { useState } from "react";
 import * as S from "./styles";
+import { MenuContent } from "../..";
 
 interface ListItemProps {
 	title: string;
-	content?: string;
+	content?: MenuContent[];
 }
 
 export const ListItem = ({ title, content }: ListItemProps) => {
@@ -27,7 +28,21 @@ export const ListItem = ({ title, content }: ListItemProps) => {
 				)}
 			</S.TitleWrapper>
 
-			<S.Content isExpanded={isExpanded}>{content}</S.Content>
+			<S.Content isExpanded={isExpanded}>
+				{content?.map((item) => (
+					<S.ContentItem key={item.title}>
+						<S.ContentItemTitle>{item.title}</S.ContentItemTitle>
+
+						{item.content && (
+							<>
+								{item.content.map((content) => (
+									<S.ContentItemLink key={content.text}>{content.text}</S.ContentItemLink>
+								))}
+							</>
+						)}
+					</S.ContentItem>
+				))}
+			</S.Content>
 		</S.Container>
 	);
 };
