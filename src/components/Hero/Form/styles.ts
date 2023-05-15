@@ -12,7 +12,25 @@ export const Container = styled.div`
 		position: absolute;
 		top: 0px;
 		right: 0px;
-		z-index: 3;
+		z-index: 2;
+	}
+`;
+
+export const SubmittedContainer = styled.div`
+	min-height: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	background-color: ${({ theme }) => theme.colors.system.background};
+	box-shadow: ${({ theme }) => theme.shadows.md};
+
+	@media (${({ theme }) => theme.devices.notebook}) {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		z-index: 2;
 	}
 `;
 

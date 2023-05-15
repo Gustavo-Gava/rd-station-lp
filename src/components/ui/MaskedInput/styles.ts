@@ -1,3 +1,4 @@
+import MaskedInput from "react-text-mask";
 import styled from "styled-components";
 
 interface InputContainerProps {
@@ -44,20 +45,15 @@ export const InputContainer = styled.div<InputContainerProps>`
 		background-color: ${({ theme }) => theme.colors.primary.transparent};
 	}
 
-	&:has(input:disabled) {
-		background-color: ${({ theme }) => theme.colors.gray[30]};
-		border-color: ${({ theme }) => theme.colors.gray[60]};
-		filter: opacity(0.5);
-		cursor: not-allowed;
-
-		&::after,
-		&::before {
-			background-color: ${({ theme }) => theme.colors.gray[30]};
-		}
+	.input {
+		display: flex;
+		flex: 1;
+		outline: none;
+		background-color: transparent;
 	}
 `;
 
-export const Input = styled.input`
+export const Input = styled(MaskedInput)`
 	display: flex;
 	flex: 1;
 	outline: none;

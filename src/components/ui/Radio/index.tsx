@@ -8,13 +8,13 @@ interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const RadioInput = forwardRef<HTMLInputElement, RadioProps>(
-	({ label, errorMessage, placeholder, type, ...rest }, ref) => {
+	({ label, errorMessage, placeholder, name, type, ...rest }, ref) => {
 		return (
 			<S.Container>
-				{label && <S.Label>{label}</S.Label>}
+				{label && <S.Label htmlFor={name}>{label}</S.Label>}
 
 				<S.InputContainer>
-					<input type="radio" ref={ref} {...rest} />
+					<input type="radio" name={name} ref={ref} {...rest} />
 
 					{placeholder && <S.Placeholder>{placeholder}</S.Placeholder>}
 				</S.InputContainer>
