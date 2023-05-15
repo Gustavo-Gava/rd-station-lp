@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import * as S from "./styles";
+import { ButtonLink } from "../ui/ButtonLink";
 
 export const CallToAction = () => {
 	return (
@@ -13,7 +14,13 @@ export const CallToAction = () => {
 				</S.Description>
 
 				<S.ButtonWrapper>
-					<Button variant="highlighted">CRIAR CONTA GRATUITA</Button>
+					<ButtonLink
+						variant="highlighted"
+						href="https://app.rdstation.com.br/signup"
+						withIcon={false}
+					>
+						CRIAR CONTA GRATUITA
+					</ButtonLink>
 				</S.ButtonWrapper>
 			</S.ContentContainer>
 		</S.Container>
