@@ -22,3 +22,14 @@ export const applyContentContainerStyles = () => css`
 	max-width: 1440px;
 	margin: 0 auto;
 `;
+
+export const centeredModalStyles = {
+	content: {
+		top: "50%",
+		left: "50%",
+		right: "auto",
+		bottom: "auto",
+		marginRight: "-50%",
+		transform: "translate(-50%, -50%)",
+	},
+} as const;

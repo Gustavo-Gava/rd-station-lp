@@ -1,8 +1,7 @@
-import Link from "next/link";
 import styled from "styled-components";
 
 export const LinkContainer = styled.a`
-	width: auto;
+	width: 100%;
 	display: inline-flex;
 	text-decoration: none;
 `;

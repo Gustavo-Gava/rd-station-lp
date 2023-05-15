@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/Footer";
 import { CallToAction } from "@/components/CallToAction";
 import { Benefits } from "@/components/Benefits";
@@ -8,7 +7,6 @@ import { List } from "@/components/List";
 import { Together } from "@/components/Together";
 import { Hero } from "@/components/Hero";
 import { Header } from "@/components/Header";
-import { Input } from "@/components/ui/Input";
 import { Demo } from "@/components/Demo";
 import { Integrations } from "@/components/Integrations";
 
@@ -69,6 +67,7 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.svg" />
 			</Head>
+
 			<main>
 				<Header />
 

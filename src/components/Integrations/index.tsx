@@ -1,6 +1,7 @@
 import Image from "next/image";
 import * as S from "./styles";
 import { Button } from "../ui/Button";
+import { ButtonLink } from "../ui/ButtonLink";
 
 type Data = {
 	title: string;
@@ -41,7 +42,9 @@ export const Integrations = ({ data }: IntegrationsProps) => {
 			</S.IconsContainer>
 
 			<S.ButtonWrapperMobile>
-				<Button>CRIAR CONTA GRATUITA</Button>
+				<ButtonLink href="https://app.rdstation.com.br/signup" withIcon={false}>
+					CRIAR CONTA GRATUITA
+				</ButtonLink>
 			</S.ButtonWrapperMobile>
 		</S.Container>
 	);
