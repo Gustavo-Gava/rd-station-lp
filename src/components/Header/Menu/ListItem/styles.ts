@@ -13,6 +13,10 @@ export const Container = styled.div`
 	padding: 16px 0;
 
 	border-bottom: 1px solid ${({ theme }) => theme.colors.gray[30]};
+
+	&:last-child {
+		border-bottom: none;
+	}
 `;
 
 export const TitleWrapper = styled.button`
