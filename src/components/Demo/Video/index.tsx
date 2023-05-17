@@ -4,15 +4,16 @@ import * as S from "./styles";
 
 interface VideoProps {
 	closeVideo: () => void;
+	link: string;
 }
 
-export const Video = ({ closeVideo }: VideoProps) => {
+export const Video = ({ closeVideo, link }: VideoProps) => {
 	return (
 		<S.IFrameContainer>
 			<S.IFrame
 				width="100%"
 				height="315"
-				src="https://www.youtube.com/embed/lGCesaaLi4s?controls=0&autoplay=1"
+				src={link}
 				title="YouTube video player"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowFullScreen

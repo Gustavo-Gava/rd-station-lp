@@ -3,22 +3,16 @@ import * as S from "./styles";
 import { Button } from "../ui/Button";
 import { ButtonLink } from "../ui/ButtonLink";
 
-type Data = {
+interface IntegrationsProps {
 	title: string;
 	description: string;
 	platforms: Array<{
 		name: string;
 		icon: string;
 	}>;
-};
-
-interface IntegrationsProps {
-	data: Data;
 }
 
-export const Integrations = ({ data }: IntegrationsProps) => {
-	const { title, description, platforms } = data;
-
+export const Integrations = ({ title, description, platforms }: IntegrationsProps) => {
 	return (
 		<S.Container>
 			<S.Header>

@@ -17,7 +17,16 @@ const modalStyles = {
 	},
 };
 
-export const Demo = () => {
+interface DemoProps {
+	title: string;
+	thumbnail: {
+		src: string;
+		alt: string;
+	};
+	videoLink: string;
+}
+
+export const Demo = ({ title, thumbnail, videoLink }: DemoProps) => {
 	const [showVideo, setShowVideo] = useState(false);
 
 	useEffect(() => {
@@ -32,7 +41,7 @@ export const Demo = () => {
 		<S.Container>
 			<S.Content>
 				<S.Header>
-					<S.Title>Entenda melhor como o RD Station Marketing funciona na prática</S.Title>
+					<S.Title>{title}</S.Title>
 
 					<Button variant="secondary" onClick={() => setShowVideo(true)}>
 						ASSISTA A DEMONSTRAÇÃO
@@ -40,12 +49,7 @@ export const Demo = () => {
 				</S.Header>
 
 				<S.ThumbnailContainer>
-					<S.ThumbnailImage
-						width={400}
-						height={300}
-						src="/images/img-video-thumbnail.jpg"
-						alt="Thumbnail"
-					/>
+					<S.ThumbnailImage width={400} height={300} src={thumbnail.src} alt={thumbnail.alt} />
 
 					<S.PlayButton aria-label="Play video" onClick={() => setShowVideo(true)}>
 						<Image src="/svg/play_icon.svg" width={80} height={80} alt="Play icon" />
@@ -53,15 +57,9 @@ export const Demo = () => {
 				</S.ThumbnailContainer>
 			</S.Content>
 
-			{showVideo && (
-				<ReactModal
-					isOpen={showVideo}
-					style={modalStyles}
-					onRequestClose={() => setShowVideo(false)}
-				>
-					<Video closeVideo={() => setShowVideo(false)} />
-				</ReactModal>
-			)}
+			<ReactModal isOpen={showVideo} style={modalStyles} onRequestClose={() => setShowVideo(false)}>
+				<Video closeVideo={() => setShowVideo(false)} link={videoLink} />
+			</ReactModal>
 		</S.Container>
 	);
 };

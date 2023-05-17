@@ -1,28 +1,36 @@
 import { Button } from "@/components/ui/Button";
 import * as S from "./styles";
 import { ButtonLink } from "../ui/ButtonLink";
+import { VisualGraphsDesktop } from "./VisualGraphsDesktop";
+import { VisualGraphsMobile } from "./VisualGraphsMobile";
 
-export const CallToAction = () => {
+interface CallToActionProps {
+	title: string;
+	description: string;
+	button: {
+		text: string;
+		link: string;
+	};
+}
+
+export const CallToAction = ({ title, button, description }: CallToActionProps) => {
 	return (
 		<S.Container>
 			<S.ContentContainer>
-				<S.Title>Por que mais de 25.000 empresas escolheram o RD Station?</S.Title>
+				<S.Title>{title}</S.Title>
 
-				<S.Description>
-					Combinamos nossos produtos de Marketing e Vendas com pessoas que se importam com seus
-					resultados e um ecossistema que apoia o seu negócio do planejamento à prática.
-				</S.Description>
+				<S.Description>{description}</S.Description>
 
 				<S.ButtonWrapper>
-					<ButtonLink
-						variant="highlighted"
-						href="https://app.rdstation.com.br/signup"
-						withIcon={false}
-					>
-						CRIAR CONTA GRATUITA
+					<ButtonLink variant="highlighted" href={button.link} withIcon={false}>
+						{button.text}
 					</ButtonLink>
 				</S.ButtonWrapper>
+
+				<VisualGraphsMobile />
 			</S.ContentContainer>
+
+			<VisualGraphsDesktop />
 		</S.Container>
 	);
 };
