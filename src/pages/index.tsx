@@ -9,6 +9,7 @@ import { Hero } from "@/components/Hero";
 import { Header } from "@/components/Header";
 import { Demo } from "@/components/Demo";
 import { Integrations } from "@/components/Integrations";
+import { SpacedSection } from "@/components/ui/SpacedSection";
 
 const integrations = {
 	title: "Torne sua operação de Marketing ainda mais poderosa",
@@ -77,13 +78,21 @@ export default function Home() {
 
 				<List />
 
-				<Benefits />
+				<SpacedSection>
+					<Benefits />
+				</SpacedSection>
 
-				<CallToAction />
+				<SpacedSection>
+					<CallToAction />
+				</SpacedSection>
 
-				<Demo />
+				<SpacedSection>
+					<Demo />
+				</SpacedSection>
 
-				<Integrations data={integrations} />
+				<SpacedSection>
+					<Integrations data={integrations} />
+				</SpacedSection>
 
 				<Footer />
 			</main>
