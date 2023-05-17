@@ -15,7 +15,12 @@ export const MenuList = ({ listItems, setListItemSelected, listItemSelected }: M
 			{listItems.map((item) => {
 				if (!item.content) {
 					return (
-						<S.ListItemLink key={item.title} href="/" target="_blank">
+						<S.ListItemLink
+							key={item.title}
+							href="/"
+							target="_blank"
+							onMouseEnter={() => setListItemSelected(item)}
+						>
 							<span>{item.title}</span>
 						</S.ListItemLink>
 					);

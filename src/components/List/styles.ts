@@ -10,7 +10,6 @@ export const Container = styled.div`
 	flex-direction: column;
 	gap: 24px;
 	background-color: ${({ theme }) => theme.colors.gray[10]};
-
 	overflow: none;
 
 	&::before {
@@ -29,6 +28,11 @@ export const Container = styled.div`
 			width: 550px;
 			height: 550px;
 		}
+		padding-top: 160px;
+	}
+
+	@media (${({ theme }) => theme.devices.notebook}) {
+		padding-top: 160px;
 	}
 `;
 
@@ -65,12 +69,17 @@ export const Content = styled.main`
 `;
 
 export const Title = styled.h3`
-	font-size: ${({ theme }) => theme.fonts.size.heading.md};
-	line-height: ${({ theme }) => theme.fonts.lineHeight.heading.md};
-	font-weight: ${({ theme }) => theme.fonts.weight.bold};
+	font-size: ${({ theme }) => theme.fonts.size.heading.sm};
+	line-height: ${({ theme }) => theme.fonts.lineHeight.heading.sm};
+	font-weight: ${({ theme }) => theme.fonts.weight.black};
 `;
 
-export const Subtitle = styled.p``;
+export const Subtitle = styled.p`
+	font-size: ${({ theme }) => theme.fonts.size.body.sm};
+	line-height: ${({ theme }) => theme.fonts.lineHeight.body.sm};
+	font-weight: ${({ theme }) => theme.fonts.weight.normal};
+	color: ${({ theme }) => theme.colors.gray[100]};
+`;
 
 export const ListWrapper = styled.div`
 	display: flex;
@@ -89,6 +98,7 @@ export const List = styled.ul`
 	flex-direction: column;
 	gap: 24px;
 	order: 2;
+	color: ${({ theme }) => theme.colors.gray[100]};
 `;
 
 export const ImageWrapper = styled.div`
@@ -110,7 +120,7 @@ export const ImageWrapper = styled.div`
 		clip-path: polygon(0 0, 100% 0, 100% 100%);
 
 		background-color: ${({ theme }) => theme.colors.gray[10]};
-		z-index: 2;
+		z-index: 0;
 	}
 `;
 

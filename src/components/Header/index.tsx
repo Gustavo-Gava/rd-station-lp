@@ -10,6 +10,7 @@ type ButtonVariant = "primary" | "secondary" | "highlighted";
 
 export type MenuContent = {
 	title: string;
+	href?: string;
 	content?: Array<{
 		text: string;
 		link: string;
@@ -18,6 +19,7 @@ export type MenuContent = {
 
 export type ListItem = {
 	title: string;
+	href?: string;
 	content?: Array<MenuContent>;
 };
 
@@ -35,7 +37,7 @@ export interface MenuDataProps {
 
 const menuData = {
 	listItems: [
-		{ title: "Menu 1" },
+		{ title: "Menu 1", href: "https://app.rdstation.com.br/signup/" },
 		{
 			title: "Menu 2",
 			content: [
@@ -46,8 +48,8 @@ const menuData = {
 				},
 			],
 		},
-		{ title: "Menu 3" },
-		{ title: "Menu 4" },
+		{ title: "Menu 3", href: "https://app.rdstation.com.br/signup/" },
+		{ title: "Menu 4", href: "https://app.rdstation.com.br/signup/" },
 	],
 	buttons: [
 		{ title: "Button", variant: "secondary" as ButtonVariant },
@@ -68,8 +70,8 @@ export const Header = () => {
 	return (
 		<S.Container>
 			<S.Content>
-				<S.LogoWrapper>
-					<Image src="/svg/logo-rd-station-default.svg" alt="Logo" width={136} height={25} />
+				<S.LogoWrapper href="/">
+					<S.Logo src="/svg/logo-rd-station-default.svg" alt="Logo" width={136} height={25} />
 				</S.LogoWrapper>
 
 				<S.MenuMobileButtonWrapper>
@@ -85,15 +87,16 @@ export const Header = () => {
 
 			<ReactModal
 				isOpen={isMenuOpen}
+				onRequestClose={() => setIsMenuOpen(false)}
 				style={{
 					content: {
 						inset: "65px 0 0 0",
 						padding: 0,
 						borderRadius: 0,
 						height: "fit-content",
-						zIndex: 99,
+						zIndex: 3,
 					},
-					overlay: { padding: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" },
+					overlay: { padding: 0, backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 2 },
 				}}
 			>
 				<Menu data={menuData} />

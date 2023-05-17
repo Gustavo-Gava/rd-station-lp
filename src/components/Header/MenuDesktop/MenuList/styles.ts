@@ -46,12 +46,13 @@ export const ListItemLink = styled.a`
 	gap: 8px;
 	cursor: pointer;
 	text-decoration: none;
-
-	&:hover {
-		color: ${({ theme }) => theme.colors.primary.main};
-	}
+	transition: color 0.2s;
 
 	&:visited {
 		color: ${({ theme }) => theme.colors.gray[100]};
+	}
+
+	&:hover {
+		color: ${({ theme }) => theme.colors.primary.main};
 	}
 `;

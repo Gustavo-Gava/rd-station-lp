@@ -4,10 +4,11 @@ import { MenuContent } from "../..";
 
 interface ListItemProps {
 	title: string;
+	href?: string;
 	content?: MenuContent[];
 }
 
-export const ListItem = ({ title, content }: ListItemProps) => {
+export const ListItem = ({ title, href, content }: ListItemProps) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const toggleIsExpanded = () => setIsExpanded(!isExpanded);
@@ -15,7 +16,13 @@ export const ListItem = ({ title, content }: ListItemProps) => {
 	return (
 		<S.Container>
 			<S.TitleWrapper onClick={toggleIsExpanded}>
-				<S.Title>{title}</S.Title>
+				{content ? (
+					<S.Title>{title}</S.Title>
+				) : (
+					<S.TitleLink href={href} target="_blank">
+						{title}
+					</S.TitleLink>
+				)}
 
 				{content && (
 					<S.ChevronIcon
@@ -31,12 +38,14 @@ export const ListItem = ({ title, content }: ListItemProps) => {
 			<S.Content isExpanded={isExpanded}>
 				{content?.map((item) => (
 					<S.ContentItem key={item.title}>
-						<S.ContentItemTitle>{item.title}</S.ContentItemTitle>
-
 						{item.content && (
 							<>
+								<S.ContentItemTitle>{item.title}</S.ContentItemTitle>
+
 								{item.content.map((content) => (
-									<S.ContentItemLink key={content.text}>{content.text}</S.ContentItemLink>
+									<S.ContentItemLink key={content.text} href={content.link} target="_blank">
+										{content.text}
+									</S.ContentItemLink>
 								))}
 							</>
 						)}

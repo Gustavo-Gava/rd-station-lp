@@ -13,7 +13,7 @@ export const Menu = ({ data }: MenuProps) => {
 		<S.Container>
 			<S.ListWrapper>
 				{data.listItems.map((item) => (
-					<ListItem key={item.title} title={item.title} content={item.content} />
+					<ListItem key={item.title} title={item.title} href={item.href} content={item.content} />
 				))}
 			</S.ListWrapper>
 

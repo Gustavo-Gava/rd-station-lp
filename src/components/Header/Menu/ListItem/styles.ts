@@ -27,6 +27,12 @@ export const Title = styled.span`
 	font-weight: ${({ theme }) => theme.fonts.weight.bold};
 `;
 
+export const TitleLink = styled.a`
+	font-size: ${({ theme }) => theme.fonts.size.body.md};
+	font-weight: ${({ theme }) => theme.fonts.weight.bold};
+	text-decoration: none;
+`;
+
 export const Content = styled.div<ContentProps>`
 	display: flex;
 	flex-direction: column;
@@ -81,9 +87,10 @@ export const ContentItemDivider = styled.div`
 	background-color: ${({ theme }) => theme.colors.gray[30]};
 `;
 
-export const ContentItemLink = styled.div`
+export const ContentItemLink = styled.a`
 	font-size: ${({ theme }) => theme.fonts.size.body.sm};
 	font-weight: ${({ theme }) => theme.fonts.weight.normal};
 	line-height: ${({ theme }) => theme.fonts.lineHeight.body.sm};
 	color: ${({ theme }) => theme.colors.gray[100]};
+	text-decoration: none;
 `;

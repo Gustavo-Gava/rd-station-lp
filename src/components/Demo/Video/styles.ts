@@ -9,6 +9,8 @@ export const IFrameContainer = styled.div`
 	width: 100%;
 	height: 100%;
 	padding-top: 40px;
+	max-width: ${({ theme }) => theme.container.width.xl};
+	margin: 0 auto;
 `;
 
 export const IFrame = styled.iframe`

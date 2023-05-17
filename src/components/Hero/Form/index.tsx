@@ -42,7 +42,7 @@ const createSchema = (hasSite: boolean) => {
 			.oneOf([yup.ref("password")], "As senhas devem ser iguais"),
 		hasSite: yup.boolean(),
 		site: hasSite
-			? yup.string().url().required("Site obrigatório caso tenha assinalado que possui site")
+			? yup.string().url("Site inválido").required("Site obrigatório")
 			: yup.string().notRequired(),
 	});
 };

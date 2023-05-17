@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/Button";
 import * as S from "./styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import { centeredModalStyles } from "@/styles/utils";
 import { Video } from "./Video";
@@ -19,6 +19,14 @@ const modalStyles = {
 
 export const Demo = () => {
 	const [showVideo, setShowVideo] = useState(false);
+
+	useEffect(() => {
+		if (showVideo) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "unset";
+		}
+	}, [showVideo]);
 
 	return (
 		<S.Container>

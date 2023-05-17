@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 	${applyFullWidthContainerStyles()};
 	position: relative;
-	min-height: 100vh;
+	min-height: 55vh;
 	background-color: ${({ theme }) => theme.colors.gray[10]};
 
 	&::after {

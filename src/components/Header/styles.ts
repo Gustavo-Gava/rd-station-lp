@@ -1,4 +1,6 @@
 import { applyContentContainerStyles, applyFullWidthContainerStyles } from "@/styles/utils";
+import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -16,7 +18,17 @@ export const Container = styled.div`
 	z-index: 5;
 `;
 
-export const LogoWrapper = styled.div``;
+export const LogoWrapper = styled(Link)``;
+
+export const Logo = styled(Image)`
+	width: 134px;
+	height: 25px;
+
+	@media (${({ theme }) => theme.devices.notebook}) {
+		width: 174px;
+		height: 32px;
+	}
+`;
 
 export const Content = styled.div`
 	${applyContentContainerStyles()}
