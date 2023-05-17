@@ -1,21 +1,18 @@
 import * as S from "./styles";
 
-export const Together = () => {
+interface TogetherProps {
+	title: string;
+	content: string;
+}
+
+export const Together = ({ content, title }: TogetherProps) => {
 	return (
 		<S.Container>
 			<S.Content>
 				<S.TextWrapper>
-					<S.Title>Estaremos juntos desde o primeiro passo!</S.Title>
+					<S.Title>{title}</S.Title>
 
-					<S.Paragraph>
-						Se você ainda não sabe como extrair o máximo das ações digitais, não tem problema. O{" "}
-						<b>RD Station Marketin</b>g é mais que uma ferramenta, nos importamos com os seus
-						resultados.
-					</S.Paragraph>
-
-					<S.Paragraph>
-						<b>Estaremos com você do planejamento até a prática!</b>
-					</S.Paragraph>
+					<S.TextContent dangerouslySetInnerHTML={{ __html: content }} />
 				</S.TextWrapper>
 			</S.Content>
 		</S.Container>

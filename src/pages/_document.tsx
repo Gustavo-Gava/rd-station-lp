@@ -2,6 +2,7 @@ import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/do
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
+	// This is to make styled-components work with SSR and prevent flash of unstyled content
 	static async getInitialProps(ctx: DocumentContext) {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;

@@ -10,7 +10,16 @@ import { Header } from "@/components/Header";
 import { Demo } from "@/components/Demo";
 import { Integrations } from "@/components/Integrations";
 import { SpacedSection } from "@/components/ui/SpacedSection";
-import { benefitsData, callToActionData, demoData, integrationsData } from "@/mock";
+
+import {
+	benefitsData,
+	callToActionData,
+	demoData,
+	heroData,
+	integrationsData,
+	listData,
+	togetherData,
+} from "@/mock";
 
 export default function Home() {
 	return (
@@ -25,11 +34,11 @@ export default function Home() {
 			<main>
 				<Header />
 
-				<Hero />
+				<Hero {...heroData} />
 
-				<Together />
+				<Together {...togetherData} />
 
-				<List />
+				<List {...listData} />
 
 				<SpacedSection>
 					<Benefits {...benefitsData} />

@@ -124,3 +124,47 @@ export const integrationsData = {
 		},
 	],
 };
+
+export const listData = {
+	title: "Resultados previsíveis e mais clientes para sua empresa",
+	subtitle: "Torne sua atuação no Marketing Digital mais eficaz",
+	listItems: [
+		{
+			id: 1,
+			content:
+				"<p><bold>Ferramentas intuitivas</bold> e com modelos prontos, vídeos explicativos e passo a passo guiado</p>",
+		},
+		{
+			id: 2,
+			content:
+				"<p><bold>Implementação com especialistas</bold> focada em planejamento e prática (nos planos Marketing Pro e Enterprise)</p>",
+		},
+		{
+			id: 3,
+			content:
+				"<p><bold>Time de especialistas em Sucesso do Cliente</bold> para apoiar na otimização da estratégia em cada fase da sua jornada (nos planos Marketing Pro e Enterprise)</p>",
+		},
+		{
+			id: 4,
+			content:
+				"<p><bold>Suporte técnico</bold> em português, espanhol e inglês para tirar dúvidas, <bold>com 97% de satisfação</bold> entre nossos clientes</p>",
+		},
+		{
+			id: 5,
+			content:
+				"<p><bold>Muito conteúdo educativo</bold>, eventos, cursos da <a href='/'>RD University</a> e comunidades para você continuar evoluindo</p>",
+		},
+	],
+};
+
+export const togetherData = {
+	title: "Estaremos juntos desde o primeiro passo!",
+	content:
+		"<div><p>Se você ainda não sabe como extrair o máximo das ações digitais, não tem problema. O <b>RD Station Marketing</b> é mais que uma ferramenta, nos importamos com os seus resultados.</p><b>Estaremos com você do planejamento até a prática!</b></div>",
+};
+
+export const heroData = {
+	title: "<h1>Gere mais <b>oportunidades</b> para seu negócio</h1>",
+	subtitle:
+		"O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.",
+};

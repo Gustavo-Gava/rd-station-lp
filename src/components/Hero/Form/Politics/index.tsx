@@ -4,7 +4,7 @@ const politics = [
 	{
 		id: 1,
 		content:
-			"<p>Ao criar minha conta estou e acordo com os <a href='https://legal.rdstation.com/pt/rdstation-services-agreement/' target='_blank'>termos de uso<a/> do software e <a href='https://legal.rdstation.com/pt/privacy-policy/' target='_blank'>política de privacidade</a>.</p>",
+			"<p>Ao criar minha conta estou e acordo com os <a href='https://legal.rdstation.com/pt/rdstation-services-agreement/' target='_blank'>termos de uso</a> do software e <a href='https://legal.rdstation.com/pt/privacy-policy/' target='_blank'>política de privacidade</a>.</p>",
 	},
 	{
 		id: 2,

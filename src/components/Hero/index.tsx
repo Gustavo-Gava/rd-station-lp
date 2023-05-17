@@ -1,18 +1,18 @@
 import { Form } from "./Form";
 import * as S from "./styles";
 
-export const Hero = () => {
+interface HeroProps {
+	title: string;
+	subtitle: string;
+}
+
+export const Hero = ({ title, subtitle }: HeroProps) => {
 	return (
 		<S.Container>
 			<S.Content>
-				<S.Title>
-					Gere mais <b>oportunidades</b> para seu negócio
-				</S.Title>
+				<S.Title dangerouslySetInnerHTML={{ __html: title }} />
 
-				<S.Subtitle>
-					O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir
-					Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.
-				</S.Subtitle>
+				<S.Subtitle>{subtitle}</S.Subtitle>
 
 				<Form />
 			</S.Content>

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 	${applyFullWidthContainerStyles()};
 	position: relative;
-	min-height: 55vh;
+	min-height: 56vh;
 	background-color: ${({ theme }) => theme.colors.gray[10]};
 
 	&::after {
@@ -39,10 +39,17 @@ export const Content = styled.div`
 	}
 `;
 
-export const Title = styled.h1`
-	font-size: ${({ theme }) => theme.fonts.size.heading.lg};
-	line-height: ${({ theme }) => theme.fonts.lineHeight.heading.lg};
-	font-weight: ${({ theme }) => theme.fonts.weight.black};
+export const Title = styled.div`
+	h1 {
+		font-size: ${({ theme }) => theme.fonts.size.heading.lg};
+		line-height: ${({ theme }) => theme.fonts.lineHeight.heading.lg};
+		font-weight: ${({ theme }) => theme.fonts.weight.black};
+	}
+
+	b {
+		font-family: ${({ theme }) => theme.fonts.family.heading};
+		color: ${({ theme }) => theme.colors.primary.main};
+	}
 
 	@media (${({ theme }) => theme.devices.notebook}) {
 		width: 40%;
@@ -50,11 +57,6 @@ export const Title = styled.h1`
 
 	@media (${({ theme }) => theme.devices.desktop}) {
 		width: 50%;
-	}
-
-	b {
-		font-family: ${({ theme }) => theme.fonts.family.heading};
-		color: ${({ theme }) => theme.colors.primary.main};
 	}
 `;
 

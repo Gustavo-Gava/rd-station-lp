@@ -19,9 +19,11 @@ export const Container = styled.div`
 export const SubmittedContainer = styled.div`
 	min-height: 800px;
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 40px 16px;
 	gap: 16px;
 	background-color: ${({ theme }) => theme.colors.system.background};
 	box-shadow: ${({ theme }) => theme.shadows.md};
@@ -34,7 +36,7 @@ export const SubmittedContainer = styled.div`
 	}
 `;
 
-export const Title = styled.h3`
+export const Title = styled.p`
 	text-align: center;
 	font-size: ${({ theme }) => theme.fonts.size.heading.xs};
 	font-weight: ${({ theme }) => theme.fonts.weight.extrabold};

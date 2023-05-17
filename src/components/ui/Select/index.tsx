@@ -4,20 +4,20 @@ import ReactSelect from "react-select";
 import * as S from "./styles";
 
 const options = [
-	{ value: "frontend", label: "Sócio(a) / CEO / Proprietário(a)" },
-	{ value: "backend", label: "Diretor(a) de Vendas" },
-	{ value: "fullstack", label: "Diretor(a) de Marketing" },
-	{ value: "fullstack", label: "Diretor(a) de Outras Áreas" },
-	{ value: "fullstack", label: "Diretor(a) de Gerente de Marketing" },
-	{ value: "fullstack", label: "Gerente de Marketing" },
-	{ value: "fullstack", label: "Gerente de Vendas" },
-	{ value: "fullstack", label: "Coordenador(a)/Supervisor(a) de Marketing" },
-	{ value: "fullstack", label: "Coordenador(a)/Supervisor(a) de Vendas" },
-	{ value: "fullstack", label: "Analista/Assistente de Marketing" },
-	{ value: "fullstack", label: "Analista/Assistente de Vendas" },
-	{ value: "fullstack", label: "Vendedor(a) / Executivo(a) de Contas" },
-	{ value: "fullstack", label: "Estudante" },
-	{ value: "fullstack", label: "Outros cargos" },
+	{ value: "ceo", label: "Sócio(a) / CEO / Proprietário(a)" },
+	{ value: "sales_director", label: "Diretor(a) de Vendas" },
+	{ value: "marketing_director", label: "Diretor(a) de Marketing" },
+	{ value: "general_director", label: "Diretor(a) de Outras Áreas" },
+	{ value: "director_marketing_manager", label: "Diretor(a) de Gerente de Marketing" },
+	{ value: "marketing_director", label: "Gerente de Marketing" },
+	{ value: "sales_manager", label: "Gerente de Vendas" },
+	{ value: "marketing_coordinator", label: "Coordenador(a)/Supervisor(a) de Marketing" },
+	{ value: "sales_coordinator", label: "Coordenador(a)/Supervisor(a) de Vendas" },
+	{ value: "marketing_junior", label: "Analista/Assistente de Marketing" },
+	{ value: "sales_junior", label: "Analista/Assistente de Vendas" },
+	{ value: "sales", label: "Vendedor(a) / Executivo(a) de Contas" },
+	{ value: "study", label: "Estudante" },
+	{ value: "others", label: "Outros cargos" },
 ];
 
 interface SelectProps {

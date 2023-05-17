@@ -60,8 +60,12 @@ export const Title = styled.h3`
 	font-weight: ${({ theme }) => theme.fonts.weight.bold};
 `;
 
-export const Paragraph = styled.p`
-	font-size: ${({ theme }) => theme.fonts.size.body.md};
-	line-height: ${({ theme }) => theme.fonts.lineHeight.body.md};
-	font-weight: ${({ theme }) => theme.fonts.weight.normal};
+export const TextContent = styled.div`
+	display: flex;
+
+	p {
+		font-size: ${({ theme }) => theme.fonts.size.body.md};
+		line-height: ${({ theme }) => theme.fonts.lineHeight.body.md};
+		font-weight: ${({ theme }) => theme.fonts.weight.normal};
+	}
 `;
