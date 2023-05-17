@@ -1,10 +1,10 @@
 <h1 align="center" >
-  <img src="https://github.com/Gustavo-Gava/rd-station-lp/assets/77810817/54f7391d-2f25-45de-ad18-ead005ec175b" />
+  <img src="https://github.com/Gustavo-Gava/rd-station-lp/assets/77810817/ed3340fd-289c-4e32-b6a5-4fedba64ac5d" />
 </h1>
 
 <h4 align="center"/> Landing Page RD </p>
 
-![mockuper (5)](https://github.com/Gustavo-Gava/rd-station-lp/assets/77810817/32f4adce-46ad-42dd-9580-247913e90d69)
+![mockuper (5)](https://github.com/Gustavo-Gava/rd-station-lp/assets/77810817/8375a44c-a905-437e-8501-3b260a61a442)
 
 ## 📋 Tabela de conteúdos
 
