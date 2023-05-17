@@ -1,10 +1,10 @@
 <h1 align="center" >
-  <img src="https://user-images.githubusercontent.com/77810817/158444130-aaf7fed9-9a33-4f84-bf59-d04261e18052.png" />
+  <img src="https://github.com/Gustavo-Gava/rd-station-lp/assets/77810817/54f7391d-2f25-45de-ad18-ead005ec175b" />
 </h1>
 
-<h4 align="center"/> Página de Administração </p>
+<h4 align="center"/> Landing Page RD </p>
 
-![image](https://user-images.githubusercontent.com/77810817/158680346-68cc69d4-bcc7-427a-b65a-f7baa6a0bbe4.png)
+![mockuper (5)](https://github.com/Gustavo-Gava/rd-station-lp/assets/77810817/32f4adce-46ad-42dd-9580-247913e90d69)
 
 ## 📋 Tabela de conteúdos
 
@@ -30,9 +30,8 @@ Deploy em: https://landing-page-rd.vercel.app/
 
 <h3 id="funcionalidades"> ✅ Funcionalidades </h3>
  
-- [x] Componentes dinâmicos 
+- [x] Componentes dinâmicos e adaptados para integração com CMS
 - [x] Formulário com validação e exibição de erros para o usuário
-- [x] Armazenamento dos dados em cache;
 - [x] Responsividade;
 
 <h3 id="tecnologias"> 📚 Tecnologias </h3>
@@ -41,7 +40,6 @@ Deploy em: https://landing-page-rd.vercel.app/
 - Typescript
 - Styled-components
 - React-hook-form e yup
-- Axios
 
 <h3 id="requisitos">🔧 Pré Requisitos</h3>
 
@@ -53,10 +51,10 @@ Deploy em: https://landing-page-rd.vercel.app/
 
 ```
   # Clone esse projeto
-  $ git clone 'https://github.com/Gustavo-Gava/dashgo'
+  $ git clone 'https://github.com/Gustavo-Gava/rd-station-lp'
 
   # Navegue até a pasta do projeto
-  $ cd ./dashgo
+  $ cd ./rd-station-lp
 
   # Instale as dependências
   $ yarn
