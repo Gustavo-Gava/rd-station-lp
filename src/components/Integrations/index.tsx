@@ -21,7 +21,9 @@ export const Integrations = ({ title, description, platforms }: IntegrationsProp
 				<S.Description>{description}</S.Description>
 
 				<S.ButtonWrapperDesktop>
-					<Button>CRIAR CONTA GRATUITA</Button>
+					<ButtonLink href="https://app.rdstation.com.br/signup" withIcon={false}>
+						CRIAR CONTA GRATUITA
+					</ButtonLink>
 				</S.ButtonWrapperDesktop>
 			</S.Header>
 
