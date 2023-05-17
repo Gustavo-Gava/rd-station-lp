@@ -32,7 +32,7 @@ export const Container = styled.div`
 	}
 
 	@media (${({ theme }) => theme.devices.notebook}) {
-		padding-top: 160px;
+		padding-top: 220px;
 	}
 `;
 

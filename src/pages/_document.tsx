@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
 
 	public render(): JSX.Element {
 		return (
-			<Html>
+			<Html lang="pt-br">
 				<Head>
 					<link rel="manifest" href="/manifest.json" />
 					<link rel="apple-touch-icon" href="/icon.png" />

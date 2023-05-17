@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 100%;
   
-    @media (min-width: 1080px) {
+    @media (min-width: 960px) {
       font-size: 125%;
     }
   }

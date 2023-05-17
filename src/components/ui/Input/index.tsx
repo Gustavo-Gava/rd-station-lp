@@ -8,7 +8,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-	({ label, errorMessage, type, ...rest }, ref) => {
+	({ label, errorMessage, type, name, ...rest }, ref) => {
 		const [inputType, setInputType] = useState(type);
 
 		const toggleVisibility = () => {
@@ -24,10 +24,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
 		return (
 			<S.Container>
-				{label && <S.Label>{label}</S.Label>}
+				{label && <S.Label htmlFor={name}>{label}</S.Label>}
 
 				<S.InputContainer error={!!errorMessage}>
-					<S.Input type={inputType} ref={ref} {...rest} />
+					<S.Input type={inputType} ref={ref} name={name} {...rest} />
 
 					{type === "password" && (
 						<button type="button" onClick={toggleVisibility}>

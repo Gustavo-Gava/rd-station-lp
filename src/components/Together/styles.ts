@@ -1,8 +1,4 @@
-import {
-	applyContainerStyles,
-	applyContentContainerStyles,
-	applyFullWidthContainerStyles,
-} from "@/styles/utils";
+import { applyContentContainerStyles, applyFullWidthContainerStyles } from "@/styles/utils";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -44,17 +40,17 @@ export const TextWrapper = styled.div`
 	gap: 16px;
 
 	@media (${({ theme }) => theme.devices.notebook}) {
-		width: 40%;
+		width: 45%;
 		justify-content: flex-start;
 		align-items: flex-start;
 	}
 
 	@media (${({ theme }) => theme.devices.desktop}) {
-		width: 50%;
+		width: 55%;
 	}
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h4`
 	font-size: ${({ theme }) => theme.fonts.size.heading.md};
 	line-height: ${({ theme }) => theme.fonts.lineHeight.heading.md};
 	font-weight: ${({ theme }) => theme.fonts.weight.bold};
