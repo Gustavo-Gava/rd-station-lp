@@ -1,3 +1,5 @@
+import { ButtonVariant } from "@/components/Header";
+
 export const benefitsData = {
 	title: "Torne sua operação de Marketing Digital mais produtiva",
 	benefits: [
@@ -167,4 +169,43 @@ export const heroData = {
 	title: "<h1>Gere mais <b>oportunidades</b> para seu negócio</h1>",
 	subtitle:
 		"O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.",
+};
+
+export const headerData = {
+	listItems: [
+		{
+			title: "Menu 1",
+			href: "https://app.rdstation.com.br/signup/",
+		},
+		{
+			title: "Menu 2",
+			content: [
+				{ title: "METODOLOGIA", content: [{ text: "Tudo sobre Inbound Marketing", link: "/" }] },
+				{
+					title: "CURSOS",
+					content: [{ text: "RD University", link: "https://app.rdstation.com.br/signup/" }],
+				},
+			],
+		},
+		{
+			title: "Menu 3",
+			href: "https://app.rdstation.com.br/signup/",
+		},
+		{
+			title: "Menu 4",
+			href: "https://app.rdstation.com.br/signup/",
+		},
+	],
+	buttons: [
+		{
+			title: "Button 1",
+			variant: "secondary" as ButtonVariant,
+		},
+		{
+			title: "Button 2",
+			variant: "primary" as ButtonVariant,
+			isLink: true,
+			href: "https://app.rdstation.com.br/signup/",
+		},
+	],
 };

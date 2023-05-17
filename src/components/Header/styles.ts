@@ -15,7 +15,7 @@ export const Container = styled.div`
 	background-color: ${({ theme }) => theme.colors.system.background};
 
 	border-bottom: 1px solid ${({ theme }) => theme.colors.gray[30]};
-	z-index: 5;
+	z-index: 100;
 `;
 
 export const LogoWrapper = styled(Link)``;
@@ -37,7 +37,11 @@ export const Content = styled.div`
 	align-items: center;
 `;
 
-export const Menu = styled.button``;
+export const Menu = styled.button`
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+`;
 
 export const MenuMobileButtonWrapper = styled.div`
 	@media (${({ theme }) => theme.devices.notebook}) {

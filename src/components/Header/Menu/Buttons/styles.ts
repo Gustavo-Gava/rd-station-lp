@@ -12,7 +12,8 @@ export const ButtonsWrapper = styled.div`
 
 	background-color: ${({ theme }) => theme.colors.gray[10]};
 
-	button {
-		width: fit-content;
+	button,
+	a {
+		width: max-content;
 	}
 `;

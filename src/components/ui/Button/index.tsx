@@ -1,6 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import * as S from "./styles";
-import Link from "next/link";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: "primary" | "secondary" | "highlighted";

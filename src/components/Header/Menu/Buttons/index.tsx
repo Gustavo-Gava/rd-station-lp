@@ -4,12 +4,17 @@ import Image from "next/image";
 import * as S from "./styles";
 import { MenuDataProps } from "../..";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { toast } from "react-toastify";
 
 interface ButtonsProps {
 	data: MenuDataProps["buttons"];
 }
 
 export const Buttons = ({ data }: ButtonsProps) => {
+	function handleClick() {
+		toast.success("Click registrado 🥳");
+	}
+
 	return (
 		<S.ButtonsWrapper>
 			{data.map((button) => {
@@ -22,7 +27,7 @@ export const Buttons = ({ data }: ButtonsProps) => {
 				}
 
 				return (
-					<Button key={button.title} variant={button.variant}>
+					<Button onClick={handleClick} key={button.title} variant={button.variant}>
 						{button.title}
 					</Button>
 				);

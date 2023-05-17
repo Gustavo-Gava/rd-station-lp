@@ -4,20 +4,16 @@ import { Buttons } from "./Buttons";
 import type { MenuDataProps } from "..";
 import * as S from "./styles";
 
-interface MenuProps {
-	data: MenuDataProps;
-}
-
-export const Menu = ({ data }: MenuProps) => {
+export const Menu = ({ listItems, buttons }: MenuDataProps) => {
 	return (
 		<S.Container>
 			<S.ListWrapper>
-				{data.listItems.map((item) => (
+				{listItems.map((item) => (
 					<ListItem key={item.title} title={item.title} href={item.href} content={item.content} />
 				))}
 			</S.ListWrapper>
 
-			<Buttons data={data.buttons} />
+			<Buttons data={buttons} />
 		</S.Container>
 	);
 };

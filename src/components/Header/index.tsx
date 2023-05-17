@@ -5,8 +5,9 @@ import * as S from "./styles";
 import { useState } from "react";
 import { Menu } from "./Menu";
 import { MenuDesktop } from "./MenuDesktop";
+import { topModalStyles } from "@/styles/utils";
 
-type ButtonVariant = "primary" | "secondary" | "highlighted";
+export type ButtonVariant = "primary" | "secondary" | "highlighted";
 
 export type MenuContent = {
 	title: string;
@@ -23,7 +24,7 @@ export type ListItem = {
 	content?: Array<MenuContent>;
 };
 
-type Button = {
+export type Button = {
 	title: string;
 	isLink?: boolean;
 	href?: string;
@@ -35,34 +36,7 @@ export interface MenuDataProps {
 	buttons: Array<Button>;
 }
 
-const menuData = {
-	listItems: [
-		{ title: "Menu 1", href: "https://app.rdstation.com.br/signup/" },
-		{
-			title: "Menu 2",
-			content: [
-				{ title: "METODOLOGIA", content: [{ text: "Tudo sobre Inbound Marketing", link: "/" }] },
-				{
-					title: "CURSOS",
-					content: [{ text: "RD University", link: "https://app.rdstation.com.br/signup/" }],
-				},
-			],
-		},
-		{ title: "Menu 3", href: "https://app.rdstation.com.br/signup/" },
-		{ title: "Menu 4", href: "https://app.rdstation.com.br/signup/" },
-	],
-	buttons: [
-		{ title: "Button", variant: "secondary" as ButtonVariant },
-		{
-			title: "Button",
-			variant: "primary" as ButtonVariant,
-			isLink: true,
-			href: "https://app.rdstation.com.br/signup/",
-		},
-	],
-};
-
-export const Header = () => {
+export const Header = ({ listItems, buttons }: MenuDataProps) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const menuIcon = isMenuOpen ? "/svg/x.svg" : "/svg/menu.svg";
@@ -81,25 +55,18 @@ export const Header = () => {
 				</S.MenuMobileButtonWrapper>
 
 				<S.MenuDesktopWrapper>
-					<MenuDesktop data={menuData} />
+					<MenuDesktop buttons={buttons} listItems={listItems} />
 				</S.MenuDesktopWrapper>
 			</S.Content>
 
 			<ReactModal
 				isOpen={isMenuOpen}
+				closeTimeoutMS={200}
 				onRequestClose={() => setIsMenuOpen(false)}
-				style={{
-					content: {
-						inset: "65px 0 0 0",
-						padding: 0,
-						borderRadius: 0,
-						height: "fit-content",
-						zIndex: 3,
-					},
-					overlay: { padding: 0, backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 2 },
-				}}
+				ariaHideApp={false}
+				style={topModalStyles}
 			>
-				<Menu data={menuData} />
+				<Menu buttons={buttons} listItems={listItems} />
 			</ReactModal>
 		</S.Container>
 	);

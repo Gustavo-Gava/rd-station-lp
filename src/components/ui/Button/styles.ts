@@ -65,7 +65,7 @@ export const Container = styled.button<ContainerProps>`
 		content: "";
 		display: block;
 		position: absolute;
-		top: calc(100% + 2px);
+		top: calc(100% + 0px);
 		left: calc(0% - 2px);
 		width: calc(100% + (2 * 2px));
 		border-top: 4px solid #000;

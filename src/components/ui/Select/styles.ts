@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ContainerProps {
-	error?: boolean;
+	$error?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
 		position: relative;
 		display: flex;
 		border: 2px solid
-			${({ theme, error }) => (error ? theme.colors.actions.error : theme.colors.gray[100])};
+			${({ theme, $error }) => ($error ? theme.colors.actions.error : theme.colors.gray[100])};
 		padding: 8px 12px;
 
 		font-size: ${({ theme }) => theme.fonts.size.body.sm};

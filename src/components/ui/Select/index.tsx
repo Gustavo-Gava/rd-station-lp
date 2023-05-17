@@ -28,7 +28,7 @@ interface SelectProps {
 
 export const Select = ({ label, errorMessage, placeholder, ...rest }: SelectProps) => {
 	return (
-		<S.Container error={!!errorMessage}>
+		<S.Container $error={!!errorMessage}>
 			{label && <S.Label>{label}</S.Label>}
 
 			<ReactSelect

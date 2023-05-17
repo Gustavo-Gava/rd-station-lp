@@ -1,7 +1,8 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 interface ListItemProps {
-	active?: boolean;
+	$active?: boolean;
 }
 
 export const Container = styled.div`
@@ -23,7 +24,7 @@ export const ListItem = styled.div<ListItemProps>`
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	color: ${({ theme, active }) => (active ? theme.colors.primary.main : "inherit")};
+	color: ${({ theme, $active }) => ($active ? theme.colors.primary.main : "inherit")};
 	cursor: pointer;
 
 	&::after {
@@ -34,8 +35,8 @@ export const ListItem = styled.div<ListItemProps>`
 		width: 100%;
 		height: 2px;
 
-		background-color: ${({ theme, active }) =>
-			active ? theme.colors.primary.main : "transparent"};
+		background-color: ${({ theme, $active }) =>
+			$active ? theme.colors.primary.main : "transparent"};
 	}
 `;
 
@@ -55,4 +56,10 @@ export const ListItemLink = styled.a`
 	&:hover {
 		color: ${({ theme }) => theme.colors.primary.main};
 	}
+`;
+
+export const Chevron = styled(Image)<ListItemProps>`
+	transition: all 0.3s;
+	transform: ${({ $active }) => ($active ? "rotate(180deg)" : "rotate(0deg)")};
+	color: ${({ theme }) => theme.colors.primary.main};
 `;

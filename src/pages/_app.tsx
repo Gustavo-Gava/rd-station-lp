@@ -3,8 +3,11 @@ import { ThemeProvider } from "styled-components";
 
 import { GlobalStyle } from "@/styles/global/createGlobalStyle";
 
-import theme from "@/styles/theme/theme";
 import "swiper/css";
+import "react-toastify/dist/ReactToastify.css";
+
+import theme from "@/styles/theme/theme";
+import { ToastContainer } from "react-toastify";
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -13,6 +16,8 @@ export default function App({ Component, pageProps }: AppProps) {
 				<Component {...pageProps} />
 
 				<GlobalStyle />
+
+				<ToastContainer />
 			</ThemeProvider>
 		</>
 	);

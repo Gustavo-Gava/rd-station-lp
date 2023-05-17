@@ -50,7 +50,7 @@ export const TextWrapper = styled.div`
 	}
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h5`
 	font-size: ${({ theme }) => theme.fonts.size.heading.md};
 	line-height: ${({ theme }) => theme.fonts.lineHeight.heading.md};
 	font-weight: ${({ theme }) => theme.fonts.weight.bold};

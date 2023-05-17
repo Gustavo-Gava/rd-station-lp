@@ -30,12 +30,12 @@ export const ListItem = ({ title, href, content }: ListItemProps) => {
 						width={24}
 						height={24}
 						alt="Chevron"
-						isExpanded={isExpanded}
+						$isExpanded={isExpanded}
 					/>
 				)}
 			</S.TitleWrapper>
 
-			<S.Content isExpanded={isExpanded}>
+			<S.Content $isExpanded={isExpanded}>
 				{content?.map((item) => (
 					<S.ContentItem key={item.title}>
 						{item.content && (

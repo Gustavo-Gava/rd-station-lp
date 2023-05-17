@@ -15,6 +15,7 @@ import {
 	benefitsData,
 	callToActionData,
 	demoData,
+	headerData,
 	heroData,
 	integrationsData,
 	listData,
@@ -32,7 +33,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<Header />
+				<Header {...headerData} />
 
 				<Hero {...heroData} />
 

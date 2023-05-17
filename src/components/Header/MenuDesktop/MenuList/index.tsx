@@ -29,12 +29,18 @@ export const MenuList = ({ listItems, setListItemSelected, listItemSelected }: M
 				return (
 					<S.ListItem
 						key={item.title}
-						active={listItemSelected?.title === item.title && !!item.content}
+						$active={listItemSelected?.title === item.title && !!item.content}
 						onMouseEnter={() => setListItemSelected(item)}
 					>
 						<span>{item.title}</span>
 
-						<Image src="/svg/chevron_down.svg" width={16} height={16} alt="Chevron Down" />
+						<S.Chevron
+							$active={listItemSelected?.title === item.title && !!item.content}
+							src="/svg/chevron_down.svg"
+							width={16}
+							height={16}
+							alt="Chevron Down"
+						/>
 					</S.ListItem>
 				);
 			})}

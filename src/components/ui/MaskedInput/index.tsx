@@ -38,7 +38,7 @@ export const MaskedInput = forwardRef<HTMLInputElement, InputProps>(
 			<S.Container>
 				{label && <S.Label>{label}</S.Label>}
 
-				<S.InputContainer error={!!errorMessage}>
+				<S.InputContainer $error={!!errorMessage}>
 					<ReactMaskedInput className="input" guide={false} mask={phoneMask} {...rest} />
 				</S.InputContainer>
 

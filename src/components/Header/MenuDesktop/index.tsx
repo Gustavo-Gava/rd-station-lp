@@ -6,14 +6,8 @@ import { MenuList } from "./MenuList";
 
 import * as S from "./styles";
 
-interface MenuDesktopProps {
-	data: MenuDataProps;
-}
-
-export const MenuDesktop = ({ data }: MenuDesktopProps) => {
+export const MenuDesktop = ({ buttons, listItems }: MenuDataProps) => {
 	const [listItemSelected, setListItemSelected] = useState<ListItem | null>(null);
-
-	const { listItems, buttons } = data;
 
 	return (
 		<S.Container>
@@ -25,9 +19,11 @@ export const MenuDesktop = ({ data }: MenuDesktopProps) => {
 
 			<Buttons data={buttons} />
 
-			{listItemSelected && listItemSelected.content && (
-				<Dropdown data={listItemSelected.content} closeDropdown={() => setListItemSelected(null)} />
-			)}
+			<Dropdown
+				isActive={!!listItemSelected && !!listItemSelected.content}
+				data={listItemSelected?.content}
+				closeDropdown={() => setListItemSelected(null)}
+			/>
 		</S.Container>
 	);
 };

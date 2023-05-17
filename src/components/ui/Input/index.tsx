@@ -26,7 +26,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			<S.Container>
 				{label && <S.Label htmlFor={name}>{label}</S.Label>}
 
-				<S.InputContainer error={!!errorMessage}>
+				<S.InputContainer $error={!!errorMessage}>
 					<S.Input type={inputType} ref={ref} name={name} {...rest} />
 
 					{type === "password" && (

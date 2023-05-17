@@ -1,7 +1,11 @@
 import { applyContentContainerStyles, applyFullWidthContainerStyles } from "@/styles/utils";
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+	$visible: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
 	${applyFullWidthContainerStyles()};
 
 	position: absolute;
@@ -9,10 +13,15 @@ export const Container = styled.div`
 	right: 0;
 	left: 0;
 	width: 100%;
-	height: 200px;
+	padding-bottom: 60px;
 
 	background-color: ${({ theme }) => theme.colors.system.background};
 	box-shadow: 0 4px 12px -12px gray;
+	transition: all 0.3s;
+
+	opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+	transform: ${({ $visible }) => ($visible ? "translateY(0)" : "translateY(-24px)")};
+	pointer-events: ${({ $visible }) => ($visible ? "all" : "none")};
 `;
 
 export const Content = styled.div`

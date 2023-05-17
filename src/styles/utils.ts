@@ -33,3 +33,14 @@ export const centeredModalStyles = {
 		transform: "translate(-50%, -50%)",
 	},
 } as const;
+
+export const topModalStyles = {
+	content: {
+		inset: "65px 0 0 0",
+		padding: 0,
+		borderRadius: 0,
+		height: "fit-content",
+		zIndex: 3,
+	},
+	overlay: { padding: 0, backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 2 },
+};

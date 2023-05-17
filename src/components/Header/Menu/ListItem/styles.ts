@@ -3,7 +3,7 @@ import Image from "next/image";
 import styled, { css } from "styled-components";
 
 interface ContentProps {
-	isExpanded: boolean;
+	$isExpanded: boolean;
 }
 
 export const Container = styled.div`
@@ -40,8 +40,8 @@ export const Content = styled.div<ContentProps>`
 	transition: all 0.3s;
 	overflow: hidden;
 
-	${({ isExpanded }) =>
-		isExpanded
+	${({ $isExpanded }) =>
+		$isExpanded
 			? css`
 					transition: all 0.3s;
 					max-height: 200px;
@@ -57,8 +57,8 @@ export const ChevronIcon = styled(Image)<ContentProps>`
 	width: 24px;
 	height: 24px;
 
-	${({ isExpanded }) =>
-		isExpanded
+	${({ $isExpanded }) =>
+		$isExpanded
 			? css`
 					transform: rotate(180deg);
 			  `
