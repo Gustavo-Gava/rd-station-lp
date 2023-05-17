@@ -8,7 +8,7 @@ export const Container = styled.div`
 	gap: 24px;
 	box-shadow: ${({ theme }) => theme.shadows.md};
 
-	@media (${({ theme }) => theme.devices.tablet}) {
+	@media (${({ theme }) => theme.devices.notebook}) {
 		max-width: 500px;
 		position: absolute;
 		top: 0px;
@@ -30,7 +30,7 @@ export const SubmittedContainer = styled.div`
 	background-color: ${({ theme }) => theme.colors.system.background};
 	box-shadow: ${({ theme }) => theme.shadows.md};
 
-	@media (${({ theme }) => theme.devices.desktop}) {
+	@media (${({ theme }) => theme.devices.notebook}) {
 		max-width: 500px;
 		position: absolute;
 		top: 0px;
