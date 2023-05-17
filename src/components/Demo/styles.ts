@@ -5,8 +5,26 @@ import styled from "styled-components";
 export const Container = styled.div`
 	${applyFullWidthContainerStyles()};
 
+	position: relative;
 	background-color: ${({ theme }) => theme.colors.gray[10]};
-	background-size: 90%;
+
+	@media (${({ theme }) => theme.devices.notebook}) {
+		background-color: transparent;
+
+		&::before {
+			content: "";
+			position: absolute;
+
+			top: 50%;
+			left: -16px;
+			transform: translateY(-50%);
+
+			width: 95%;
+			height: 75%;
+			background-color: ${({ theme }) => theme.colors.gray[10]};
+			z-index: -1;
+		}
+	}
 `;
 
 export const Content = styled.div`

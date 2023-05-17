@@ -46,7 +46,11 @@ export const Demo = () => {
 			</S.Content>
 
 			{showVideo && (
-				<ReactModal isOpen={showVideo} style={modalStyles}>
+				<ReactModal
+					isOpen={showVideo}
+					style={modalStyles}
+					onRequestClose={() => setShowVideo(false)}
+				>
 					<Video closeVideo={() => setShowVideo(false)} />
 				</ReactModal>
 			)}
