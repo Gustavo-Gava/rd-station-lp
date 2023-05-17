@@ -9,6 +9,7 @@ export const Container = styled.div`
 	box-shadow: ${({ theme }) => theme.shadows.md};
 
 	@media (${({ theme }) => theme.devices.notebook}) {
+		max-width: 500px;
 		position: absolute;
 		top: 0px;
 		right: 0px;
@@ -17,6 +18,7 @@ export const Container = styled.div`
 `;
 
 export const SubmittedContainer = styled.div`
+	width: 100%;
 	min-height: 800px;
 	display: flex;
 	flex: 1;
@@ -29,6 +31,7 @@ export const SubmittedContainer = styled.div`
 	box-shadow: ${({ theme }) => theme.shadows.md};
 
 	@media (${({ theme }) => theme.devices.notebook}) {
+		max-width: 500px;
 		position: absolute;
 		top: 0px;
 		right: 0px;

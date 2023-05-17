@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import * as S from "./styles";
+import Link from "next/link";
 
 type Data = {
 	title: string;
@@ -27,7 +28,9 @@ export const Dropdown = ({ data, closeDropdown }: DropdownProps) => {
 						{item.content && (
 							<S.ListWrapper>
 								{item.content.map((content) => (
-									<S.ListItem key={content.text}>{content.text}</S.ListItem>
+									<S.ListItem key={content.text}>
+										<S.ListLink href={content.link}>{content.text}</S.ListLink>
+									</S.ListItem>
 								))}
 							</S.ListWrapper>
 						)}

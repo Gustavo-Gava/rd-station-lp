@@ -12,6 +12,7 @@ export const Container = styled.div`
 	height: 200px;
 
 	background-color: ${({ theme }) => theme.colors.system.background};
+	box-shadow: 0 4px 12px -12px gray;
 `;
 
 export const Content = styled.div`
@@ -50,4 +51,15 @@ export const ListItem = styled.li`
 	color: ${({ theme }) => theme.colors.gray[100]};
 `;
 
-export const ListLink = styled.a``;
+export const ListLink = styled.a`
+	text-decoration: none;
+	transition: color 0.2s;
+
+	&:visited {
+		color: ${({ theme }) => theme.colors.gray[100]};
+	}
+
+	&:hover {
+		color: ${({ theme }) => theme.colors.primary.main};
+	}
+`;

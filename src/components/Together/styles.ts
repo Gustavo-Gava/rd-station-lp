@@ -44,13 +44,13 @@ export const TextWrapper = styled.div`
 	gap: 16px;
 
 	@media (${({ theme }) => theme.devices.notebook}) {
-		width: 40%;
+		width: 45%;
 		justify-content: flex-start;
 		align-items: flex-start;
 	}
 
 	@media (${({ theme }) => theme.devices.desktop}) {
-		width: 50%;
+		width: 55%;
 	}
 `;
 

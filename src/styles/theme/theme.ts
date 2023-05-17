@@ -110,6 +110,7 @@ const theme = {
 		md: "0 4px 12px 0 rgba(33, 36, 41, 0.14);",
 		lg: "0 8px 16px 0 rgba(33, 36, 41, 0.2)",
 		xl: "0 14px 24px 0 rgba(33, 36, 41, 0.3)",
+		md_bottom: "0 4px 12px -12px rgba(33, 36, 41, 0.14)",
 	},
 
 	container: {

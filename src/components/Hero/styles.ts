@@ -52,20 +52,20 @@ export const Title = styled.div`
 	}
 
 	@media (${({ theme }) => theme.devices.notebook}) {
-		width: 40%;
+		width: 45%;
 	}
 
 	@media (${({ theme }) => theme.devices.desktop}) {
-		width: 50%;
+		width: 55%;
 	}
 `;
 
 export const Subtitle = styled.p`
 	@media (${({ theme }) => theme.devices.notebook}) {
-		width: 40%;
+		width: 45%;
 	}
 
 	@media (${({ theme }) => theme.devices.desktop}) {
-		width: 50%;
+		width: 55%;
 	}
 `;
