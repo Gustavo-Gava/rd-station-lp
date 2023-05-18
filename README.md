@@ -19,8 +19,11 @@
 <!--te-->
 
 <h4 align="center">
-  Projeto Finalizado 🚀  
+  Projeto Finalizado 🚀
 </h4>
+
+- Link do github: https://github.com/Gustavo-Gava/rd-station-lp
+- Link do deploy: https://landing-page-rd.vercel.app/
 
 <h3 id="sobre">ℹ Sobre </h3>
 
